@@ -1,66 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Projeto CRUD Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este é um projeto CRUD (Create, Read, Update, Delete) simples desenvolvido em Laravel. Ele permite que você gerencie clientes, incluindo funcionalidades para adicionar novos clientes, listar todos os clientes, filtrar clientes por diferentes critérios e autenticar usuários com telas de login e registro.
 
-## About Laravel
+## Funcionalidades
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Adicionar Clientes**: Adicione novos clientes fornecendo informações como Razão Social, CNPJ e E-mail.
+- **Listagem de Clientes**: Visualize todos os clientes cadastrados em uma tabela com suas informações.
+- **Filtrar Clientes**: Filtre a lista de clientes com base em critérios como Razão Social, CNPJ e E-mail.
+- **Tela de Login**: Faça login com um usuário existente para acessar as funcionalidades protegidas do sistema.
+- **Tela de Registro**: Registre-se como um novo usuário para obter acesso ao sistema.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Capturas de Tela
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![Tela de Login](login-crud-laravel.png)
 
-## Learning Laravel
+*Figura 1: Tela de Login*
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Tela do CRUD](crud-laravel.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+*Figura 2: Tela do CRUD*
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Começando
 
-## Laravel Sponsors
+### Pré-requisitos
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- PHP >= 8.0.2
+- Composer
+- MySQL
 
-### Premium Partners
+### Instalação
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+1. Clone o repositório para o seu ambiente local:
 
-## Contributing
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Navegue até o diretório do projeto:
 
-## Code of Conduct
+   ```bash
+   cd nome-do-projeto
+   
+3. Instale as dependências do Composer:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ```bash
+    composer install
 
-## Security Vulnerabilities
+4. Renomeie o arquivo .env.example para .env e configure as variáveis de ambiente, incluindo a conexão com o banco de dados MySQL
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. Execute as migrações do banco de dados para criar as tabelas necessárias:
 
-## License
+   ```bash
+    php artisan migrate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+6. Inicie o servidor de desenvolvimento:
+
+   ```bash
+    php artisan serve
+   
+7. Acesse a aplicação em seu navegador usando o URL fornecido pelo comando php artisan serve.
+
+## Testes
+Este projeto inclui testes de unidade e testes de funcionalidade para garantir que as funcionalidades estejam corretas. Para executar os testes, use o seguinte comando:
+    
+    php artisan test
+    
+## Contribuição
+Contribuições são bem-vindas! Se você encontrar um bug, tiver uma solicitação de recurso ou quiser melhorar a aplicação de qualquer forma, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+Este projeto é licenciado sob a [licença MIT](https://opensource.org/licenses/MIT).
+
